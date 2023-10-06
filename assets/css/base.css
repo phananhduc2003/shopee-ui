@@ -11,6 +11,7 @@
   --header-with-search-height: calc(
     var(--header-height) - var(--navbar-height)
   );
+  --header-sort-bar-height: 46px;
 }
 
 * {
@@ -26,37 +27,27 @@ html {
 
 /* Responsive */
 
-.gird {
-  width: 1200px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.gird__full-width {
-  width: 100%;
-}
-
-.gird__row {
+.grid__row {
   display: flex;
-  flex-wrap: wrap; /* tổng độ dài item con sẽ xuống dòng khi quá độ dài gird__row */
+  flex-wrap: wrap; /* tổng độ dài item con sẽ xuống dòng khi quá độ dài grid__row */
   margin-left: -5px;
   margin-right: -5px;
 }
 /* test */
 
-.gird__column-2 {
+.grid__column-2 {
   padding-left: 5px;
   padding-right: 5px;
   width: 16.6667%;
 }
 
-.gird__column-2-4 {
+.grid__column-2-4 {
   padding-left: 5px;
   padding-right: 5px;
   width: 20%;
 }
 
-.gird__column-10 {
+.grid__column-10 {
   padding-left: 5px;
   padding-right: 5px;
   width: 83.3334%;

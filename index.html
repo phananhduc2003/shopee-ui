@@ -10,6 +10,10 @@
     />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese"
@@ -22,8 +26,8 @@
   <body>
     <div class="app">
       <header class="header">
-        <div class="gird">
-          <nav class="header__navbar">
+        <div class="grid wide">
+          <nav class="header__navbar hide-on-mobile-tablet">
             <ul class="header__navbar-list">
               <li
                 class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate"
@@ -147,7 +151,8 @@
           </nav>
           <!-- header with search -->
           <div class="header-width-search">
-            <div class="header__logo">
+            <div class="mobile-search"><i class="mobile-search-icon fa-solid fa-magnifying-glass"></i></div>
+            <div class="header__logo hide-on-tablet">
               <a href="#" class="header__logo-img">
                 <svg viewBox="0 0 192 65" class="header__logo-img">
                   <g fill-rule="evenodd">
@@ -160,7 +165,7 @@
               </a>
             </div>
 
-            <div class="header__search">
+            <div class="header__search hide-on-mobile">
               <div class="header__search-input-wrap">
                 <input
                   type="text"
@@ -226,12 +231,22 @@
             </div>
           </div>
         </div>
+        <ul class="header__sort-bar">
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Liên quan</a></li>
+          <li class="header__sort-item header__sort-link--active">
+            <a href="" class="header__sort-link ">Mới nhất</a></li>
+          <li class="header__sort-item ">
+            <a href="" class="header__sort-link">Bán chạy</a></li>
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Giá</a></li>
+        </ul>
       </header>
 
       <div class="container">
-        <div class="gird">
-          <div class="gird__row app__content">
-            <div class="gird__column-2">
+        <div class="grid wide">
+          <div class="row sm-gutter app__content">
+            <div class="col l-2 m-0 c-0">
               <nav class="category">
                 <h3 class="category__heading">
                   <i class="category__heading-icon fa-solid fa-list"></i>Danh
@@ -257,9 +272,9 @@
                 </ul>
               </nav>
             </div>
-            <div class="gird__column-10">
-              <div class="home-filter">
-                <span class="home-filter__label">Sắp xếp theo</span>
+            <div class="col l-10 m-12 c-12">
+              <div class="home-filter hide-on-mobile-tablet">
+                <span class="home-filter__label ">Sắp xếp theo</span>
                 <button class="home-filter__btn btn btn__primary">
                   Phổ biến
                 </button>
@@ -307,10 +322,33 @@
                   </div>
                 </div>
               </div>
-
+              <nav class="mobile-category">
+                <ul class="mobile-category__list">
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Khung Giờ Săn Sale </a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Khung Giờ Săn Sale</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Khung Giờ Săn Sale</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Khung Giờ Săn Sale</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Khung Giờ Săn Sale</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Khung Giờ Săn Sale</a>
+                  </li>
+                  
+                  
+                </ul>
+              </nav>
               <div class="home-product">
-                <div class="gird__row">
-                  <div class="gird__column-2-4">
+                <div class="row sm-gutter">
+                  <div class="col l-2-4 m-4 c-6 ">
                     <!-- product item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -375,7 +413,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="gird__column-2-4">
+                  <div class="col l-2-4 m-4 c-6 ">
                     <!-- product item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -440,7 +478,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="gird__column-2-4">
+                  <div class="col l-2-4 m-4 c-6 ">
                     <!-- product item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -505,7 +543,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="gird__column-2-4">
+                  <div class="col l-2-4 m-4 c-6 ">
                     <!-- product item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -570,7 +608,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="gird__column-2-4">
+                  <div class="col l-2-4 m-4 c-6 ">
                     <!-- product item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -635,7 +673,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="gird__column-2-4">
+                  <div class="col l-2-4 m-4 c-6 ">
                     <!-- product item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -700,7 +738,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="gird__column-2-4">
+                  <div class="col l-2-4 m-4 c-6 ">
                     <!-- product item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -765,7 +803,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="gird__column-2-4">
+                  <div class="col l-2-4 m-4 c-6 ">
                     <!-- product item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -830,7 +868,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="gird__column-2-4">
+                  <div class="col l-2-4 m-4 c-6 ">
                     <!-- product item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -895,7 +933,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="gird__column-2-4">
+                  <div class="col l-2-4 m-4 c-6 ">
                     <!-- product item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -1003,103 +1041,105 @@
         </div>
       </div>
 
-      <footer class="footer"></footer>
-      <div class="gird">
-        <div class="gird__row">
-          <div class="gird__column-2-4">
-            <h3 class="footer__heading">Chăm sóc khách hàng</h3>
-            <ul class="footer__list">
-              <li class="footer-item">
-                <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
-              </li>
-              <li class="footer-item">
-                <a href="" class="footer-item__link">Shopee-Mail</a>
-              </li>
-              <li class="footer-item">
-                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
-              </li>
-            </ul>
-          </div>
-          <div class="gird__column-2-4">
-            <h3 class="footer__heading">Giới thiệu</h3>
-            <ul class="footer__list">
-              <li class="footer-item">
-                <a href="" class="footer-item__link">Giới thiệu </a>
-              </li>
-              <li class="footer-item">
-                <a href="" class="footer-item__link">Tuyển dụng</a>
-              </li>
-              <li class="footer-item"></li>
-                <a href="" class="footer-item__link">Điều khoản</a>
-              </li>
-            </ul>
-          </div>
-          <div class="gird__column-2-4">
-            <h3 class="footer__heading">Dang mục</h3>
-            <ul class="footer__list">
-              <li class="footer-item">
-                <a href="" class="footer-item__link">
-                  Áo thun
-                </a>
-              </li>
-              <li class="footer-item">
-
-                <a href="" class="footer-item__link">
-                  Quần ống rộng
-                </a>
-              </li>
-              <li class="footer-item">
-
-                <a href="" class="footer-item__link">
-                  balo thời trang
-                </a>
-              </li>
-            </ul>
-            
-          </div>
-          <div class="gird__column-2-4">
-            <h3 class="footer__heading">Theo dõi</h3>
-            <ul class="footer__list">
-              <li class="footer-item">
-                <a href="" class="footer-item__link">
-                  <i class="footer-item__link-icon fa-brands fa-facebook"></i>
-                  Facebook
-                </a>
-              </li>
-              <li class="footer-item">
-                <a href="" class="footer-item__link">
-                  <i class="footer-item__link-icon fa-brands fa-instagram"></i>
-                  Instagram
-                </a>
-              </li>
-              <li class="footer-item">
-                <a href="" class="footer-item__link">
-                  <i class="footer-item__link-icon fa-brands fa-linkedin"></i>
-                  Linkedin
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="gird__column-2-4">
-            <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
-            <div class="footer__download">
-              <img src="./assets/img/qr_code.png" alt="qr" class="footer__download-qr">
-              <div class="footer__download-apps">
-                <a class="footer__download-app-link"><img src="./assets/img/googleplay.png" alt="google" class="footer__download-app-img"></a>
-                <a class="footer__download-app-link"><img src="./assets/img/appstore.png" alt="appstore" class="footer__download-app-img"></a>
-
+      <footer class="footer">
+        
+        <div class="grid wide footer__content">
+          <div class="row">
+            <div class="col l-2-4 m-4 c-6 ">
+              <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+              <ul class="footer__list">
+                <li class="footer-item">
+                  <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                </li>
+                <li class="footer-item">
+                  <a href="" class="footer-item__link">Shopee-Mail</a>
+                </li>
+                <li class="footer-item">
+                  <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col l-2-4 m-4 c-6 ">
+              <h3 class="footer__heading">Giới thiệu</h3>
+              <ul class="footer__list">
+                <li class="footer-item">
+                  <a href="" class="footer-item__link">Giới thiệu </a>
+                </li>
+                <li class="footer-item">
+                  <a href="" class="footer-item__link">Tuyển dụng</a>
+                </li>
+                <li class="footer-item"></li>
+                  <a href="" class="footer-item__link">Điều khoản</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col l-2-4 m-4 c-6 ">
+              <h3 class="footer__heading">Dang mục</h3>
+              <ul class="footer__list">
+                <li class="footer-item">
+                  <a href="" class="footer-item__link">
+                    Áo thun
+                  </a>
+                </li>
+                <li class="footer-item">
+  
+                  <a href="" class="footer-item__link">
+                    Quần ống rộng
+                  </a>
+                </li>
+                <li class="footer-item">
+  
+                  <a href="" class="footer-item__link">
+                    balo thời trang
+                  </a>
+                </li>
+              </ul>
+              
+            </div>
+            <div class="col l-2-4 m-4 c-6 ">
+              <h3 class="footer__heading">Theo dõi</h3>
+              <ul class="footer__list">
+                <li class="footer-item">
+                  <a href="" class="footer-item__link">
+                    <i class="footer-item__link-icon fa-brands fa-facebook"></i>
+                    Facebook
+                  </a>
+                </li>
+                <li class="footer-item">
+                  <a href="" class="footer-item__link">
+                    <i class="footer-item__link-icon fa-brands fa-instagram"></i>
+                    Instagram
+                  </a>
+                </li>
+                <li class="footer-item">
+                  <a href="" class="footer-item__link">
+                    <i class="footer-item__link-icon fa-brands fa-linkedin"></i>
+                    Linkedin
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col l-2-4 m-4 c-6 ">
+              <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+              <div class="footer__download">
+                <img src="./assets/img/qr_code.png" alt="qr" class="footer__download-qr">
+                <div class="footer__download-apps">
+                  <a class="footer__download-app-link"><img src="./assets/img/googleplay.png" alt="google" class="footer__download-app-img"></a>
+                  <a class="footer__download-app-link"><img src="./assets/img/appstore.png" alt="appstore" class="footer__download-app-img"></a>
+  
+                </div>
               </div>
             </div>
           </div>
+          
         </div>
-        
-      </div>
-      <div class="footer__bottom">
-        <div class="gird">
-          <p class="footer__text">© 2023 - Bản quyền thuộc về Công ty TNHH Shopee</p>
+        <div class="footer__bottom">
+          <div class="grid wide">
+            <p class="footer__text">© 2023 - Bản quyền thuộc về Công ty TNHH Shopee</p>
+          </div>
         </div>
       </div>
-    </div>
+      </footer>
     <!-- Modal layout -->
     <div class="modal js-modal">
       <div class="modal__overlay"></div>
